@@ -16,7 +16,7 @@
 
 **MongoDB** – A “NoSQL” database and non-relational document-orientated database used for storing data for a back-end JavaScript application. MongoDB stores data in flexible documents using a query language based on JavaScript Object Notation(JSON). The size, number and content of document fields vary, so the data structure can be altered later on If your application has users, MongoDB is an example of a database where your user information will be kept.
 
-**Express.JS** - A light backend framework for serving content to the web. If your backend application needs to send information across the Internet, Express provides tools for accomplishing that.Express’s framework was designed to enable simple, easy construction of APIs and efficient web applications. It is loaded with plugin features and is renowned for its speed. Its minimalistic structure makes it simple for developers to pick up and start using right away.
+**Express.JS** - A light backend framework for serving content to the web. If your backend application needs to send information across the Internet, Express provides tools for accomplishing that Express’s framework was designed to enable simple, easy construction of APIs and efficient web applications. It is loaded with plugin features and is renowned for its speed. Its minimalistic structure makes it simple for developers to pick up and start using right away.Express.js a layer built on the top of the Node js that helps manage servers and routes.
 
 **React.Js** - Is a front-end /client-side Javascript framework.It is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. So it lets developers use a full-featured programming language to design conditional or repetitive DOM elements rather than relying on templates that automatically create repetitive DOM (Document Object Model) or HTML elements.  It is  recommend Express. js is used as a backend service
 
@@ -53,7 +53,7 @@
 * SSH into our server or local terminal . A link below shows us how to ssh or use our terminal to connect to our server 
 
 ## STEP 2 - BACK-END CONFIGURATION 
-<u>##### UPDATE & UPGRADE UBUNTU</u>
+##### UPDATE & UPGRADE UBUNTU
 
 ```
 $ sudo apt update
@@ -66,5 +66,48 @@ sudo apt-get install -y nodejs
 ```
 
 The above command if for the installation of node.js and npm. npm is the package manager for the Node JavaScript platform. It puts modules in place so that node can find them, and manages dependency conflicts intelligently. It is extremely configurable to support a wide variety of use cases. Most commonly, it is used to publish, discover, install, and develop node programs.
+
+* The below command is to verify that node.js and npm has been installed 
+```
+$ node -v
+
+$ npm -v 
+```
+![Processing triggers for man-db (2 9 1-1)](https://user-images.githubusercontent.com/68599226/167923685-e3f400a3-f97f-4524-af4c-4043e9d0d681.png)
+
+The above is to verify node and npm has been installed 
+
+## STEP 3 - SETTING-UP OUR APPLICATION 
+##### CREATE A TODO DIRECTORY AND CD INTO THE DIRECTORY 
+
+```
+$ mkdir Todo
+
+$ cd Todo
+```
+We need to initiate a package called package.json.This file will normally contain information about our app and the dependencies that it needs to run. Follow the prompts after running the command. We can hit enter to accept default values, then we accept to write out the package.json file by typing yes.
+
+```
+$ npm init
+```
+The command above is to initiate the package.json file 
+
+![Pasted Graphic 168](https://user-images.githubusercontent.com/68599226/167927630-b4ab7928-b257-4d65-a739-3855fc9208f0.png)
+
+The above should be the display result we get once we run the npm init 
+
+* So we should have our package.json inside our Todo directory as shown below 
+
+![Pasted Graphic 170](https://user-images.githubusercontent.com/68599226/167928274-6f434c02-58ac-48b3-8c00-8748d08333ba.png)
+
+## STEP 4 - INSTALL EXPRESS.JS 
+
+Express.js is a layer built on the top of the Node.js that helps manage servers and routes.Its a back-end framework for Node.js web applications . Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
+* Inside the Todo directory , we will install the express.js file using npm
+
+```
+$ npm install express
+```
 
 
