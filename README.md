@@ -50,3 +50,8 @@
 ![Pasted Graphic 165](https://user-images.githubusercontent.com/68599226/167845714-52fac543-4140-4f5c-8756-b7202284dd51.png)
 
 * SSH into our server or local terminal . A link below shows us how to ssh or use our terminal to connect to our server 
+
+## STEP 2 - BACK-END CONFIGURATION 
+
+$ sudo apt update
+$ sudo apt upgrade
