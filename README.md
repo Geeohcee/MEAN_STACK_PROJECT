@@ -124,7 +124,7 @@ Once we ls , we should have the below display of information
 ![total 28](https://user-images.githubusercontent.com/68599226/167934276-9784d3d0-ede6-406b-b8d3-c23fde06dbf5.png)
 
 
-Then we need to populate the index.js file 
+* Then we need to populate the index.js file 
 
 ```
 $ vi index.js 
@@ -151,3 +151,60 @@ app.listen(port, () => {
 console.log(`Server running on port ${port}`)
 });
 ```
+* We then test if our server is running
+
+```
+node index.js
+```
+![Pasted Graphic 172](https://user-images.githubusercontent.com/68599226/167935300-c7e51100-f4b0-496e-9156-8598096a4be3.png)
+
+We should have the above display 
+
+We open up port 5000 on our security group on Ec2 ubuntu machine 
+
+![image](https://user-images.githubusercontent.com/68599226/167940802-649db6e7-a4af-42bb-9cc6-058c7c6016af.png)
+
+We select secuity group and edit inbound rule and set to port 5000. We should have the below display 
+
+![image](https://user-images.githubusercontent.com/68599226/167941739-84c21057-1163-4872-9f71-1f0faae057ed.png)
+
+* Then we browse the below Ipaddress
+
+```
+ipaddress:5000
+```
+Our website should look like this 
+
+![image](https://user-images.githubusercontent.com/68599226/167942285-1f9c1165-170f-453d-a50e-ce4b681995af.png)
+
+## Step 5 - Set Routes
+
+**We need to create routes that will define various endpoints that the todo app will depend on.**
+
+So let’s create a folder routes
+ 
+ ```
+ $ mkdir routes
+ ```
+ 
+Change directory into the routes folder.
+ 
+```
+$ cd routes
+```
+
+Now, create a file api.js with the command below
+ 
+```
+$ touch api.js
+```
+
+ 
+Open the file with the command below
+
+ 
+```
+vi api.js
+
+```
+
