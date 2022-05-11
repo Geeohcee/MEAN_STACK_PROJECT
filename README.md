@@ -13,4 +13,4 @@
 
 **MEAN STACK COMPONENT**
 
-**MongoDB** – A “NoSQL” database used for storing data for a back-end JavaScript application. If your application has users, MongoDB is an example of a database where your user information will be kept.
+**MongoDB** – A “NoSQL” database and non-relational document-orientated database used for storing data for a back-end JavaScript application. MongoDB stores data in flexible documents using a query language based on JavaScript Object Notation(JSON). The size, number and content of document fields vary, so the data structure can be altered later on If your application has users, MongoDB is an example of a database where your user information will be kept.
