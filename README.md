@@ -19,4 +19,16 @@
 
 **React.Js** - Is a front-end /client-side Javascript framework.It is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. So it lets developers use a full-featured programming language to design conditional or repetitive DOM elements rather than relying on templates that automatically create repetitive DOM (Document Object Model) or HTML elements.  It is  recommend Express. js is used as a backend service
 
-**Node.Js** - NodeJS is a cross-platform and opensource Javascript runtime environment that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser. Nodejs comes with a lot of modules and mostly used in web development.Node.JS makes use of Chrome’s V8 JavaScript engine and is intended to allow developers to build scalable network applications and execute JavaScript code outside of browsers. Node.js works by using its own module system that is based on CommonJS, meaning it does not need an enclosing HTML page to put together more than one JavaScript file 
+**Node.Js** - NodeJS is a cross-platform and opensource Javascript runtime environment that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser. Nodejs comes with a lot of modules and mostly used in web development.Node.JS makes use of Chrome’s V8 JavaScript engine and is intended to allow developers to build scalable network applications and execute JavaScript code outside of browsers. Node.js works by using its own module system that is based on CommonJS, meaning it does not need an enclosing HTML page to put together more than one JavaScript file
+
+![At this point of time,](https://user-images.githubusercontent.com/68599226/167841166-7d6b6e1e-8507-4671-aeb1-9f3fe0a0bcb7.png)
+ 
+## STEP 1
+
+* Spin up an ubuntu server on AWS and select an AMI - Ubuntu 20.04  
+
+![Pasted Graphic 162](https://user-images.githubusercontent.com/68599226/167843835-8ad10de5-1297-4f64-b549-76e292d9a0c9.png)
+
+* Choose instance type
+
+![Pasted Graphic 1](https://user-images.githubusercontent.com/68599226/167844275-26f02188-f824-4796-8341-5cff6523f820.png)
