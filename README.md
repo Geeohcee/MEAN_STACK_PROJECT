@@ -32,3 +32,21 @@
 * Choose instance type
 
 ![Pasted Graphic 1](https://user-images.githubusercontent.com/68599226/167844275-26f02188-f824-4796-8341-5cff6523f820.png)
+
+* Configure Instance Details 
+
+![Pasted Graphic 2](https://user-images.githubusercontent.com/68599226/167844632-cb70466e-d6c2-4749-96c6-733737676a52.png)
+
+* Add Storage 
+
+![Pasted Graphic 163](https://user-images.githubusercontent.com/68599226/167844722-fcc62a00-0b97-499b-a0eb-d3ae97ad2ac4.png)
+
+* Add Tags 
+
+![Stop 5 Add Tags](https://user-images.githubusercontent.com/68599226/167844854-d0493f24-1ebc-4a7d-a0bc-6157bc6029aa.png)
+
+* configure Security Group
+
+![Pasted Graphic 165](https://user-images.githubusercontent.com/68599226/167845714-52fac543-4140-4f5c-8756-b7202284dd51.png)
+
+* SSH into our server or local terminal . A link below shows us how to ssh or use our terminal to connect to our server 
