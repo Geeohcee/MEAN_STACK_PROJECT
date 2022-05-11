@@ -1,6 +1,7 @@
 # MEAN_STACK_PROJECT
 
-**What is Tech Stack** :A Tech stack comprises of the many components which work together to produce an application which serves the needs of users and businesses. This comprises of **Front-end framework, Back-end framework and Database technologies**
+### What is a Tech Stack ?
+**A Tech stack comprises of the many components which work together to produce an application which serves the needs of users and businesses. This comprises of** |Front-end framework|Back-end framework|Database technologiees|
 1. **Front-end framework** does most of the “heavy lifting” of building a complex website or mobile app, so the developers and designers can focus on providing the specific features and fixes needed by the users and the business. **E.g React.js** 
 2. **Back-end framework** does most of the “heavy lifting” of communication between the website or mobile app and the database and business logic. **E.g Express.js** 
 3. **Database technologies** store and organize data, as well as provide features for searching, filtering, and reporting data. **E.g MongoDb** 
@@ -52,6 +53,18 @@
 * SSH into our server or local terminal . A link below shows us how to ssh or use our terminal to connect to our server 
 
 ## STEP 2 - BACK-END CONFIGURATION 
+<u>##### UPDATE & UPGRADE UBUNTU</u>
 
+```
 $ sudo apt update
 $ sudo apt upgrade
+```
+##### INSTALL NODE.JS ON THE SERVER 
+
+```
+sudo apt-get install -y nodejs
+```
+
+The above command if for the installation of node.js and npm. npm is the package manager for the Node JavaScript platform. It puts modules in place so that node can find them, and manages dependency conflicts intelligently. It is extremely configurable to support a wide variety of use cases. Most commonly, it is used to publish, discover, install, and develop node programs.
+
+
