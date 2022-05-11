@@ -7,3 +7,10 @@
 
 
 **WHAT IS A MERN STACK**: MERN Stack is a Javascript Stack that is used for easier and faster deployment of full-stack web applications. MERN Stack comprises of 4 technologies namely: **MongoDB, Express.JS, React.JS and Node.JS** It is designed to make the development process smoother and easier
+
+![Database](https://user-images.githubusercontent.com/68599226/167833544-b26a2ba1-2461-48a2-8f2b-57ff78a9346e.png)
+
+
+**MEAN STACK COMPONENT**
+
+**MongoDB** – A “NoSQL” database used for storing data for a back-end JavaScript application. If your application has users, MongoDB is an example of a database where your user information will be kept.
