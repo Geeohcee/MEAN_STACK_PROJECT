@@ -109,5 +109,45 @@ Express.js is a layer built on the top of the Node.js that helps manage servers 
 ```
 $ npm install express
 ```
+* Then we create an index.js file inside Todo directory 
+
+```
+$ touch index.js
+```
+Inside the todo list folder, We will Install the dotenv module
+
+```
+$ npm install dotenv
+```
+Once we ls , we should have the below display of information
+
+![total 28](https://user-images.githubusercontent.com/68599226/167934276-9784d3d0-ede6-406b-b8d3-c23fde06dbf5.png)
 
 
+Then we need to populate the index.js file 
+
+```
+$ vi index.js 
+```
+```
+const express = require('express');
+require('dotenv').config();
+
+const app = express();
+
+const port = process.env.PORT || 5000;
+
+app.use((req, res, next) => {
+res.header("Access-Control-Allow-Origin", "\*");
+res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+next();
+});
+
+app.use((req, res, next) => {
+res.send('Welcome to Express');
+});
+
+app.listen(port, () => {
+console.log(`Server running on port ${port}`)
+});
+```
