@@ -272,6 +272,10 @@ Now we need to update our routes from the file api.js in Routes directory to mak
 In Routes directory, open api.js with vi api.js, delete the code inside with :%d and paste the code below into it then save and exit
 
 ```
+```
+$ vi api.js
+```
+
 const express = require ('express');
 const router = express.Router();
 const Todo = require('../models/todo');
