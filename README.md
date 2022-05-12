@@ -7,14 +7,17 @@
 3. **Database technologies** store and organize data, as well as provide features for searching, filtering, and reporting data. **E.g MongoDb** 
 
 
-**WHAT IS A MERN STACK**: MERN Stack is a Javascript Stack that is used for easier and faster deployment of full-stack web applications. MERN Stack comprises of 4 technologies namely: **MongoDB, Express.JS, React.JS and Node.JS** It is designed to make the development process smoother and easier
+**WHAT IS A MERN STACK ?**
+
+The MERN stack is an amalgamation of four technologies **MongoDB, Express.JS, React.JS and Node.JS** . This combination allows developers to create complete websites (back-end and front-end). With the MERN stack, we use JavaScript on the client side and Node.js on the server side. The MERN stack was created to give full stack developers the ability to develop a site from start to finish, without having to know or use another skill.
+Developers can thus create a website or a web application from start to finish, and can manage both the front-end and the back-end. The MERN stack provides the possibility of mastering both the algorithmic and logical part of the backend, as well as the design, the user experience and animation components of the front end part.This translates into recruitment savings for companies that can have a single developer do work that commonly requires two.The MERN stack represents an alliance of the most powerful technologies on the market.
 
 ![Database](https://user-images.githubusercontent.com/68599226/167833544-b26a2ba1-2461-48a2-8f2b-57ff78a9346e.png)
 
 
 **MEAN STACK CORE COMPONENT**
 
-**MongoDB** – A “NoSQL” database and non-relational document-orientated database used for storing data for a back-end JavaScript application. MongoDB stores data in flexible documents using a query language based on JavaScript Object Notation(JSON). The size, number and content of document fields vary, so the data structure can be altered later on If your application has users, MongoDB is an example of a database where your user information will be kept.
+**MongoDB** – A “NoSQL” database and non-relational document-orientated database used for storing data for a back-end JavaScript application. MongoDB allows you to manage databases. It differs from SQL. MongoDB is used in the MEAN stack because the data is manipulated in JSON format. It is also really simple to transform JavaScript data into MongoDB and vice versa, thanks to libraries such as mongoose, for example. Data manipulation becomes child’s play, with efficiency and simplicity.
 
 **Express.JS** - A light backend framework for serving content to the web. If your backend application needs to send information across the Internet, Express provides tools for accomplishing that Express’s framework was designed to enable simple, easy construction of APIs and efficient web applications. It is loaded with plugin features and is renowned for its speed. Its minimalistic structure makes it simple for developers to pick up and start using right away.Express.js a layer built on the top of the Node js that helps manage servers and routes.
 
@@ -179,7 +182,7 @@ Our website should look like this
 
 ## Step 5 - Set Routes
 
-**We need to create routes that will define various endpoints that the todo app will depend on.**
+**Routes help the frontend application to interact with the backend at multiple endpoints. You can create these endpoints and wire them to a function that does a particular task.**
 
 So let’s create a folder routes
  
@@ -207,4 +210,101 @@ Open the file with the command below
 vi api.js
 
 ```
+* We populate the api.js file with below code 
 
+```
+const express = require ('express');
+const router = express.Router();
+
+router.get('/todos', (req, res, next) => {
+
+});
+
+router.post('/todos', (req, res, next) => {
+
+});
+
+router.delete('/todos/:id', (req, res, next) => {
+
+})
+
+module.exports = router;
+```
+
+## Step 6 - CREATE MODELS
+Models Provide Clean Interface to interact with your MongoDB database through moongoose library. To install mongoose , we have to be in home directory 
+```
+$ npm install mongoose
+```
+![Pasted Graphic 173](https://user-images.githubusercontent.com/68599226/168035058-562f28d4-6c27-4dfd-9276-ced289241a33.png)
+
+* We then create a model directory 
+
+```
+$ mkdir models 
+```
+* Inside the model directory , we create a todo.js
+
+```
+$ touch todo.js
+```
+We vi into the todo.js file and paste the below command
+
+```
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+//create schema for todo
+const TodoSchema = new Schema({
+action: {
+type: String,
+required: [true, 'The todo text field is required']
+}
+})
+
+//create model for todo
+const Todo = mongoose.model('todo', TodoSchema);
+
+module.exports = Todo;
+```
+Now we need to update our routes from the file api.js in Routes directory to make use of the new model.
+
+In Routes directory, open api.js with vi api.js, delete the code inside with :%d and paste the code below into it then save and exit
+
+```
+const express = require ('express');
+const router = express.Router();
+const Todo = require('../models/todo');
+
+router.get('/todos', (req, res, next) => {
+
+//this will return all the data, exposing only the id and action field to the client
+Todo.find({}, 'action')
+.then(data => res.json(data))
+.catch(next)
+});
+
+router.post('/todos', (req, res, next) => {
+if(req.body.action){
+Todo.create(req.body)
+.then(data => res.json(data))
+.catch(next)
+}else {
+res.json({
+error: "The input field is empty"
+})
+}
+});
+
+router.delete('/todos/:id', (req, res, next) => {
+Todo.findOneAndDelete({"_id": req.params.id})
+.then(data => res.json(data))
+.catch(next)
+})
+
+module.exports = router;
+
+```
+## Step 7 - SETTING UP MONGODB DATABASE
+
+We need to set-up a database where our data can be stored. We will make use of mLab. mLab is a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers Amazon, Google, and Microsoft Azure, and has partnered with platform-as-a-service providers.
