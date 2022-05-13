@@ -415,5 +415,7 @@ In the Todo folder, open the package.json file. Change the highlighted part of t
 
 From our Todo directory, we cd into or client directory , vi package.json
 ```
-cd client
-package.json
+$ cd client
+
+$ cd package.json
+```
