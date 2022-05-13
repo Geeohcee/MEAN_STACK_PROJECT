@@ -392,5 +392,11 @@ $ npx create-react-app client
 * We then run the react application ,but before we run the appliction , we need to install some dependecies such as **concurrently**: It is used to run more than one command simultaneously from the same terminal window and **nodemon:** It is used to run and monitor the server. If there is any change in the server code, nodemon will restart it automatically and load the new changes.
 ```
 $ npm install concurrently --save-dev
+
+```
+![image](https://user-images.githubusercontent.com/68599226/168275378-11750787-9155-431b-be4f-877d7a2c9ffa.png)
+
+```
 $ npm install nodemon --save-dev
 ```
+![image](https://user-images.githubusercontent.com/68599226/168275443-701f3261-bdb6-4a00-ae2e-d032f76ee435.png)
