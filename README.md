@@ -365,3 +365,4 @@ console.log(`Server running on port ${port}`)
 ```
 node index.js
 ```
+![image](https://user-images.githubusercontent.com/68599226/168261330-86e01827-3d4a-46aa-a31e-7b86892e7ce9.png)
