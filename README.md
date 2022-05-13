@@ -311,3 +311,55 @@ module.exports = router;
 ## Step 7 - SETTING UP MONGODB DATABASE
 
 We need to set-up a database where our data can be stored. We will make use of mLab. mLab is a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers Amazon, Google, and Microsoft Azure, and has partnered with platform-as-a-service providers.
+
+In order to allow the node.js to connect to the database in Mongodb, the index.js was updated so as to reflect the use of dotenv. We setup the dotenv file in our Todo directory 
+
+```
+touch .env
+vi .env
+```
+The index.js needs to be uodated so as to reflect the use of .This will allow the  Node.js to  connect to the database. We delete the existing content in the index. js and past the below command. To delete the entire content on our editor , we input the following **:%d**
+
+To do that using vi, follow below steps
+
+Open the file with vim index.js and paste the below code 
+
+```
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const routes = require('./routes/api');
+const path = require('path');
+require('dotenv').config();
+
+const app = express();
+
+const port = process.env.PORT || 5000;
+
+//connect to the database
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => console.log(`Database connected successfully`))
+.catch(err => console.log(err));
+
+//since mongoose promise is depreciated, we overide it with node's promise
+mongoose.Promise = global.Promise;
+
+app.use((req, res, next) => {
+res.header("Access-Control-Allow-Origin", "\*");
+res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+next();
+});
+
+app.use(bodyParser.json());
+
+app.use('/api', routes);
+
+app.use((err, req, res, next) => {
+console.log(err);
+next();
+});
+
+app.listen(port, () => {
+console.log(`Server running on port ${port}`)
+});
+```
