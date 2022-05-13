@@ -400,3 +400,20 @@ $ npm install concurrently --save-dev
 $ npm install nodemon --save-dev
 ```
 ![image](https://user-images.githubusercontent.com/68599226/168275443-701f3261-bdb6-4a00-ae2e-d032f76ee435.png)
+
+In the Todo folder, open the package.json file. Change the highlighted part of the below screenshot and replace with the code below.
+
+```
+"scripts": {
+"start": "node index.js",
+"start-watch": "nodemon index.js",
+"dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
+},
+```
+
+## CONFIGURATION OF PACKAGE.JSON FILE 
+
+From our Todo directory, we cd into or client directory , vi package.json
+```
+cd client
+package.json
