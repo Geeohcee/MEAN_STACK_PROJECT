@@ -366,3 +366,27 @@ console.log(`Server running on port ${port}`)
 node index.js
 ```
 ![image](https://user-images.githubusercontent.com/68599226/168261330-86e01827-3d4a-46aa-a31e-7b86892e7ce9.png)
+
+## Step 8 - BACK-END TESTING USING RESTFULAPI
+We have written the back-end part of our Todo apllication and completed the database. We are yet to complete the front-end UI part. We will make use of react.js to complete this task. We also need to test our back-end code using restfulapi . We will make use of an api application called **Postman**. We will use postman to test our API . 
+
+To install Postman in Ubuntu
+```
+$ sudo snap install postman
+```
+![image](https://user-images.githubusercontent.com/68599226/168271446-7038618c-8b42-43b5-bfb0-766e124cd3a9.png)
+
+* To open postman application  
+
+http://ipaddress:5000/api/todos
+
+
+## Step 9 - CREATING FRONT-END USING REACT.JS 
+
+In our Todo directory , we run the below command to create a react app client file  . The react client file . This contains all the react code and dependecies  allows us create an interface for the client to interact with the api. 
+```
+$ npx create-react-app client
+```
+![image](https://user-images.githubusercontent.com/68599226/168273542-4b116d69-c772-44b1-a977-febe4bb80b0a.png)
+
+* We then run the react application ,but before we run the appliction , we need to install some dependecies such as **concurrently**: It is used to run more than one command simultaneously from the same terminal window and **nodemon:** It is used to run and monitor the server. If there is any change in the server code, nodemon will restart it automatically and load the new changes.
