@@ -318,11 +318,9 @@ In order to allow the node.js to connect to the database in Mongodb, the index.j
 touch .env
 vi .env
 ```
-The index.js needs to be uodated so as to reflect the use of .This will allow the  Node.js to  connect to the database. We delete the existing content in the index. js and past the below command. To delete the entire content on our editor , we input the following **:%d**
+The index.js needs to be uodated so as to reflect the use of .This will allow the  Node.js to  connect to the database. We delete the existing content in the index. js and past the below command. To delete the entire content on our editor , we input the following **:%d**. This will delete the entire content on on the index.js file .
 
-To do that using vi, follow below steps
-
-Open the file with vim index.js and paste the below code 
+* To do that using vi, we open the file with vi index.js and paste the below code 
 
 ```
 const express = require('express');
